@@ -17,4 +17,10 @@ gulp.task('clean', (done) => {
     done();
 });
 
-gulp.task('default', gulp.series('clean', 'serve'));
+gulp.task('default', gulp.series((done) => {
+    runSequence(
+        'clean',
+        'serve',
+        done()
+    );
+}));
