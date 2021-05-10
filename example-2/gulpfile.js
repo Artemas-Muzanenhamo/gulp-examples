@@ -1,14 +1,22 @@
 const {series, src, dest} = require('gulp');
+const del = require('del');
+const files = {
+    htmlPath: 'app/*.html'
+}
 
 function clean(done) {
-    dest('dist')
-        .pipe()
+    console.log('CLEAN JOB STARTING...');
+    del(['dist/index.html']);
+    console.log('CLEAN JOB FINISHED...');
     done();
 }
 
-function build(done) {
-    console.log('build function was called');
+function serve(done) {
+    console.log('SERVE TASK STARTING...');
+    src(files.htmlPath)
+        .pipe(dest('dist'));
+    console.log('SERVE TASK FINISHED...');
     done();
 }
 
-exports.default = series(clean, build);
+exports.default = series(clean, serve);
