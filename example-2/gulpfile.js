@@ -1,7 +1,8 @@
-const {series} = require('gulp');
+const {series, src, dest} = require('gulp');
 
 function clean(done) {
-    console.log('clean function was called');
+    dest('dist')
+        .pipe()
     done();
 }
 

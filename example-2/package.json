@@ -9,6 +9,7 @@
   "author": "Artemass",
   "license": "ISC",
   "devDependencies": {
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-htmlrender": "^0.3.0"
   }
