@@ -5,17 +5,13 @@ const files = {
 }
 
 function clean(done) {
-    console.log('CLEAN JOB STARTING...');
     del(['dist/index.html']);
-    console.log('CLEAN JOB FINISHED...');
     done();
 }
 
 function serve(done) {
-    console.log('SERVE TASK STARTING...');
     src(files.htmlPath)
         .pipe(dest('dist'));
-    console.log('SERVE TASK FINISHED...');
     done();
 }
 
