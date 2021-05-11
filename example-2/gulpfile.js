@@ -3,12 +3,7 @@ const del = require('del');
 const files = {
     htmlPath: 'app/*.html'
 }
-const {clean} = require('./gulp-custom/clean')
-
-// function clean(done) {
-//     del(['dist/index.html']);
-//     done();
-// }
+const {clean} = require('./gulp-custom/clean');
 
 function serve(done) {
     src(files.htmlPath)
