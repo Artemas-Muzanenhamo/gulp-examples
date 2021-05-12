@@ -1,5 +1,4 @@
 const {series, src, dest} = require('gulp');
-const del = require('del');
 const files = {
     htmlPath: 'app/*.html'
 }
